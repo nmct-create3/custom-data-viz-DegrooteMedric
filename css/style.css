@@ -1,0 +1,148 @@
+@import"https://unpkg.com/open-props/easings.min.css";
+
+:root {
+    --color-1: lch(58.62 76.08 16 / 1);
+    --color-2: lch(68.71 66.97 40 / 1);
+    --color-3: lch(84.69 61.01 80 / 1);
+    --color-4: lch(68.91 59.98 160 / 1);
+    --color-5: lch(58 48.13 210 / 1);
+    --color-6: lch(49.68 85.07 290 / 1);
+
+    --color-neutral-050: lch(96.54 5 290 / 1);
+    --color-neutral-100: lch(90 5 290 / 1);
+    --color-neutral-200: lch(80 5 290 / 1);
+    --color-neutral-300: lch(70 5 290 / 1);
+    --color-neutral-400: lch(60 10 290 / 1);
+    --color-neutral-500: lch(50 10 290 / 1);
+    --color-neutral-600: lch(40 12.5 290 / 1);
+    --color-neutral-700: lch(20 15 290 / 1);
+    --color-neutral-800: lch(10 10 290 / 1);
+    --color-neutral-900: lch(5 5 290 / 1);
+
+    --global-uiColor: var(--color-6);
+    --global-textColor: var(--color-neutral-800);
+    --global-textColor-muted: var(--color-neutral-600);
+    --global-textColor-meta: var(--color-neutral-500);
+    --global-backgroundColor: var(--color-neutral-100);
+    --global-foregroundColor: white;
+    --global-input-background: var(--color-neutral-100);
+
+    --global-fontSize: 14;
+}
+
+
+/* reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* global page styles */
+
+html {}
+
+/* center everything */
+
+body {}
+
+h2 {}
+
+/* screen reader only object class */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*
+    Button reset object
+*/
+
+.button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/* only add margin top if elements are adjacent */
+
+.flow>*+* {
+    margin-top: 1.5rem;
+}
+
+/* app stuff */
+
+.app {}
+
+.app__output {}
+
+/* the paths */
+
+.chart__path {}
+
+/* the legend and controls */
+
+.legend,
+.controls {}
+
+.controls {}
+
+
+.control__label {}
+
+.legend {}
+
+.legend__item {}
+
+.legend__key {}
+
+/* theme toggle */
+
+.theme-toggle {}
+
+.theme-toggle__icon {}
+
+/*
+    utility classes
+*/
+
+.color-muted {
+    color: var(--global-textColor-muted);
+}
+
+.color-meta {
+    color: var(--global-textColor-meta);
+}
