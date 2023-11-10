@@ -47,7 +47,6 @@ const drawArc = (([cx, cy], [rx, ry], [t1, Δ], φ,) => {
 // get the data with async and start the chain of functions
 // pass the data to the next function in the chain
 
-
 // render the controls (radio buttons) and make them listen to changes to update the chart and legend
 
 // render the legend for the first party and then update it with new data

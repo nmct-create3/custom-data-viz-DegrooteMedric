@@ -46,6 +46,8 @@ html {}
 
 body {}
 
+/* global typography */
+
 h2 {}
 
 /* screen reader only object class */
@@ -97,35 +99,11 @@ h2 {}
 
 /* app stuff */
 
-.app {}
-
-.app__output {}
-
 /* the paths */
-
-.chart__path {}
 
 /* the legend and controls */
 
-.legend,
-.controls {}
-
-.controls {}
-
-
-.control__label {}
-
-.legend {}
-
-.legend__item {}
-
-.legend__key {}
-
 /* theme toggle */
-
-.theme-toggle {}
-
-.theme-toggle__icon {}
 
 /*
     utility classes
