@@ -29,6 +29,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 1rem;
 }
 
 img,
@@ -91,7 +92,11 @@ h2 {}
     -webkit-appearance: none;
 }
 
-/* only add margin top if elements are adjacent */
+/*
+    Object: Flow
+    ---
+    Only add margin top if elements are adjacent
+*/
 
 .flow>*+* {
     margin-top: 1.5rem;
