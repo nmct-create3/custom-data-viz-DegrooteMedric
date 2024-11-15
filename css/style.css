@@ -1,5 +1,19 @@
 @import"https://unpkg.com/open-props/easings.min.css";
 
+/* optie kan ook zijn -- om de grid maar 1 vakje te doen
+je hebt dan 2 elementen:
+
+theme-toggle:
+    - justify content: end
+    - align content: start
+app-flow:
+    -justify content:center
+    - alignt content: center
+    */
+
+
+
+
 :root {
     --color-1: oklch(0.67 0.23 12.3 / 1);
     --color-2: oklch(0.74 0.17 34.45);
@@ -19,9 +33,28 @@
     --color-neutral-800: oklch(0.23 0.03 286.47);
     --color-neutral-900: oklch(0.18 0.02 290.7);
 
+    --global-fontFamily: 'Inter', sans-serif;
     --global-fontSize: 14;
+
+    /* variabele colors */
+    --global-uiCoLor: var(--coLor-6);
+    --global-textcolor: var(--coLor-neutraL-800);
+    --global-textcolor-muted: var(--coLor-neutraL-600);
+    --global-textcolor-meta: var(--coLor-neutraL-500) ;
+    --global-backgroundcolor: var(--coLor-neutraL-100) ;
+    --global-foregroundCoLor:white;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root{
+        --global-textcolor: var(--color-neutral-100);
+        --global-textcolor-muted: var(--color-neutral-300);
+        --global-textcolor-meta: var(--color-neutral-500);
+        --global-backgroundcolor: var(--color-neutral-900);
+        --global-foregroundcolor: var(--color-neutral-800);
+    }
+
+}
 
 /* reset */
 
@@ -41,11 +74,24 @@ svg {
 
 /* global page styles */
 
-html {}
+html {
+    font-family: "Inter" ,sans-serif;
+    line-height:1.5;
+    color: var(--global-textColor);
+    background-color: var(--global-backgroundcolor);
+    font-size: calc(var(--global-fontSize) / 16 * 1rem);
+}
 
 /* center everything */
 
-body {}
+body {
+    font-family: var(--global-fontFamily);
+    font-size: var(--global-fontSize);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: min-content auto;
+    min-height: 100vh;
+}
 
 /* global typography */
 
@@ -80,6 +126,27 @@ h2 {}
     -webkit-appearance: none;
 }
 
+.theme-toggle {
+    width: 1.5rem;
+    height: 1.5rem;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+}
+
+.theme-toggle__icon {
+    fill: var(--global-textColor);
+}
+
+.theme-toggle__icon--sun {
+    display: block;
+}
+
+.theme-toggle__icon--moon {
+    display: none;
+}
+
+
 /*
     Object: Flow
     ---
@@ -91,6 +158,18 @@ h2 {}
 }
 
 /* app stuff */
+.app-flow{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--global-foregroundcolor);
+    color: var(--global-textcolor);
+    align-self: center;
+    
+}
+
+.app__title{
+
+}
 
 /* the paths */
 
