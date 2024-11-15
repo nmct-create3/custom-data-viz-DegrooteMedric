@@ -49,7 +49,7 @@ const renderLegend = obj => {
     const $legend = document.querySelector(`.legend`);
 
     $legend.innerHTML += Object.keys(keys).map((key, i) => {
-        return `<li style="--legendColor: var(--color-${i + 1})" class="legend__item">
+        return `<li class="legend__item">
                     <span class="legend__key">${key}</span>
                     <span class="legend__value">${keys[key]}</span>
                 </li>`;
@@ -68,7 +68,7 @@ const renderControls = data => {
         return `
         <li class="control">
             <label class="control__label">
-                <input class="control__input sr-only" type="radio" name="control" value="${key}" />
+                <input class="control__input" type="radio" name="control" value="${key}" />
                 <span class="control__text">${key}</span>
             </label>
         </li>
